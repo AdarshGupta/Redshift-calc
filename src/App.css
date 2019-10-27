@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  border: solid 5px black;
+  background-color: red;
+  border-width: 10px;
 }
 
 .App-logo {
@@ -19,4 +21,29 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.datatype-inputs {
+  font-size:11px;
+  border:solid 1px #aacfe4;
+  position: absolute;
+  right: 37%;
+  width: 150px;
+}
+
+label {
+  border: solid 3px black;
+  padding-right: 10px;
+}
+
+.input-divs {
+  border: 3px solid blue;
+  padding-left: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.submit-btn {
+  margin: 20px 600px;
+  border: solid 3px black;
 }
