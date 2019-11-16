@@ -3,7 +3,7 @@
   background-color: #1F2124;
   border-width: 10px;
   padding-top: 3%;
-  padding-bottom: 12%;
+  padding-bottom: 5%;
   color: #FFFFF3;
 }
 
@@ -133,7 +133,7 @@
 .resultant-div {
   border: 2px solid #D81159;
   padding: 0px;
-  margin: 101px 0px 0px;
+  margin: 90px 0px 0px;
   height: 60px;
   width: 500px;
   margin-left: 550px; 
@@ -176,4 +176,13 @@
 
 .submit-btn:selected {
   border: none;
+}
+
+.footer {
+  color: #E71D36;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 65px;
+  font-family: 'Yeon Sung', cursive;
 }
