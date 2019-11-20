@@ -37,6 +37,7 @@ function interpretDecimalInput(inputType, inputPrecision, inputScale){
     }
     else{
       alert("Invalid data type: " + inputType);
+      return;
     }
     scale = 0;
   }
@@ -57,83 +58,22 @@ function calcResultantDecimal(calcDetails){
   let result_scale = 0;
 
   let fop_decimal = interpretDecimalInput(fop, calcDetails.fop_precision_input, calcDetails.fop_scale_input);
-  fop_precision = fop_decimal.precision;
-  fop_scale = fop_decimal.scale;
-  
-
-  // if(fop === "decimal"){
-  //   if(calcDetails.fop_precision_input){
-  //     fop_precision = parseInt(calcDetails.fop_precision_input);
-  //   }
-  //   else{
-  //     alert("Please specify the 'Precision' value for the decimal data type of first operand."); //else the default value of 18 is used
-  //     return;
-  //     // fop_precision = 18;
-  //   }
-
-  //   if(calcDetails.fop_scale_input){
-  //     fop_scale = parseInt(calcDetails.fop_scale_input);
-  //   }
-  //   else{
-  //     alert("Please specify the 'Scale' value for the decimal data type of first operand."); // else the default value of 0 is used
-  //     return;
-  //     // fop_scale = 0;
-  //   }
-  // }
-  // else{
-  //   if(fop === "smallint"){
-  //     fop_precision = 5;
-  //   }
-  //   else if(fop === "int"){
-  //     fop_precision = 10;
-  //   }
-  //   else if(fop === "bigint"){
-  //     fop_precision = 19;
-  //   }
-  //   else{
-  //     alert("Invalid data type: " + fop);
-  //   }
-  //   fop_scale = 0;
-  // }
+  if(fop_decimal){
+    fop_precision = fop_decimal.precision;
+    fop_scale = fop_decimal.scale;
+  }
+  else{
+    return;
+  }
 
   let sop_decimal = interpretDecimalInput(sop, calcDetails.sop_precision_input, calcDetails.sop_scale_input);
-  sop_precision = sop_decimal.precision;
-  sop_scale = sop_decimal.scale;
-
-  // if(sop === "decimal"){
-  //   if(calcDetails.sop_precision_input){
-  //     sop_precision = parseInt(calcDetails.sop_precision_input);
-  //   }
-  //   else{
-  //     alert("Please specify the 'Precision' value for the decimal data type of second operand."); // else the default value of 18 is used
-  //     return;
-  //     // sop_precision = 18;
-  //   }
-
-  //   if(calcDetails.sop_scale_input){
-  //     sop_scale = parseInt(calcDetails.sop_scale_input);
-  //   }
-  //   else{
-  //     alert("Please specify the 'Scale' value for the decimal data type of second operand"); // else default value of 0 is used.
-  //     return;
-  //     // sop_scale = 0;
-  //   }
-  // }
-  // else{
-  //   if(sop === "smallint"){
-  //     sop_precision = 5;
-  //   }
-  //   else if(sop === "int"){
-  //     sop_precision = 10;
-  //   }
-  //   else if(sop === "bigint"){
-  //     sop_precision = 19;
-  //   }
-  //   else{
-  //     alert("Invalid data type: " + sop);
-  //   }
-  //   sop_scale = 0;
-  // }
+  if(sop_decimal){
+    sop_precision = sop_decimal.precision;
+    sop_scale = sop_decimal.scale;
+  }
+  else{
+    return;
+  }
 
   if(fop_scale > fop_precision || sop_scale > sop_precision){
     alert("The scale value must be less than or equal to the precision value.");
