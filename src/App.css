@@ -37,6 +37,7 @@
   font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
   margin-top: 22px;
+  text-transform: capitalize;
 }
 
 .datatype-inputs {
