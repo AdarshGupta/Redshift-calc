@@ -241,7 +241,11 @@ class CalculatorForm extends React.Component {
               <div className="resultant-datatype">{this.state.resultant_datatype.toUpperCase()}</div>
             </div>
 
-            <div className="footer">Made with &hearts; by Adarsh</div>
+            <div className="footer">
+              <a href="https://github.com/AdarshGupta/Redshift-calc">Made in React</a> by Adarsh Gupta
+              <br/>
+              <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html" className="reference">Redshift documentation on "Numeric Computation"</a>
+            </div>
           </form>
         </div>
       </div>
