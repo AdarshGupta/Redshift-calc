@@ -5,6 +5,8 @@
   padding-top: 3%;
   padding-bottom: 4%;
   color: #FFFFF3;
+  height: 100%;
+  width: 100%;
 }
 
 .App-logo {
@@ -15,9 +17,8 @@
   color: #00dffc;
   margin-bottom: 80px;
   text-align: center;
-  font-size: 70px;
-  font-family: 'Pacifico', cursive; 
-  /* font-family: 'Yeon Sung', cursive; */
+  font-size: calc(100% + 3.2vw);
+  font-family: 'Pacifico', cursive;
 }
 
 .App-link {
@@ -25,47 +26,48 @@
 }
 
 .input-divs {
-  padding-left: 500px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 29%;
+  padding-top: 0.8%;
+  padding-bottom: 0.8%;
   height: 100px;
+  width: 100%;
 }
 
 .input-lbl {
-  padding-right: 10px;
-  font-size: 45px;
+  padding-right: 0.8%;
+  font-size: calc(100% + 1.7vw);
   font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
-  margin-top: 22px;
+  margin-top: 1.3%;
   text-transform: capitalize;
 }
 
 .datatype-inputs {
-  font-size: 30px;
+  font-size: calc(100% + 0.9vw);
   border: none;
   position: absolute;
   left: 50%;
-  width: 250px;
-  margin-top: 35px;
+  width: 15%;
+  margin-top: 2%;
 }
 
 .prec_arg_lbl {
   position: absolute;
   left: 66%;
   padding-top: 3px;
-  font-size: 18px;
+  font-size: calc(100% + 0.12vw);
   font-family: 'Roboto Condensed', sans-serif;
   color: #fbd14b;
   text-transform: uppercase;
 }
 
 #precision_input {
-  font-size: 30px;
+  font-size: calc(100% + 1vw);
   border: none;
   position: absolute;
   left: 66.7%;
   width: 50px;
-  margin-top: 35px;
+  margin-top: 2%;
   border-radius: 5px;
   text-align: center;
 }
@@ -74,19 +76,19 @@
   position: absolute;
   left: 72.6%;
   padding-top: 3px;
-  font-size: 18px;
+  font-size: calc(100% + 0.12vw);
   font-family: 'Roboto Condensed', sans-serif;
   color: #fbd14b;
   text-transform: uppercase;
 }
 
 .scale_input {
-  font-size: 30px;
+  font-size: calc(100% + 1vw);
   border: none;
   position: absolute;
   left: 72.7%;
   width: 50px;
-  margin-top: 35px;
+  margin-top: 2%;
   border-radius: 5px;
   text-align: center;
 }
@@ -101,7 +103,7 @@
   padding: 0;
   margin: 0;
   justify-content: space-evenly;
-  font-size: 45px;
+  font-size: calc(100% + 1.8vw);
   height: 150px;
   align-content: center;
   align-items: center;
