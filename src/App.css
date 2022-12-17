@@ -12,16 +12,16 @@ body {
   color: #00dffc;
   margin: 40px 0 80px;
   text-align: center;
-  font-size: clamp(18px, 5vw, 60px);
+  font-size: clamp(28px, 5vw, 60px);
   font-family: 'Roboto Mono', monospace;
   font-weight: 200;
 }
 
 .input-divs {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -32,6 +32,7 @@ body {
   color: #00dffc;
   width: 300px;
   text-align: right;
+  margin-right: 50px;
 }
 
 .datatype-section{
@@ -107,13 +108,14 @@ body {
 .operator-container {
   list-style: none;
   padding: 50px 0;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: clamp(18px, 5vw, 60px);
   height: 150px;
+  max-width: 1200px;
   align-items: center;
 }
 
@@ -124,10 +126,11 @@ body {
   align-items: center;
   text-align: center;
   width: 25%;
+  font-size: 60px;
 }
 
 .operator-item div{
-  border: 1px solid #00dffc;
+  border: 2px solid #00dffc;
   border-radius: 50%;
   height: 80px;
   width: 80px;
@@ -144,7 +147,7 @@ body {
   display: block;
   width: auto;
   height: auto;
-  margin-top: -8%;
+  margin-top: -6.4px;
   border-radius: 50%;
   z-index: -1;
   position: relative;
@@ -165,7 +168,7 @@ div.selected {
 }
 
 .resultant-div {
-  border: 2px solid #D81159;
+  border: 0px solid #D81159;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -183,24 +186,28 @@ div.selected {
 }
 
 .resultant-datatype {
-  font-size: clamp(16px, 3vw, 24px);
-  color: lightgrey;
-  opacity: 0.1;
+  border: 2px solid #D81159;
   margin: 0;
   padding: 5px 10px;
   text-align: center;
   width: 75%;
 }
 
-.res_avail{
+.resultant-datatype span{
+  font-size: clamp(16px, 3vw, 24px);
+  color: lightgrey;
+  opacity: 0.1;
+}
+
+.resultant-datatype span.res_avail{
   color: #D81159;
   opacity: 1;
 }
 
 .submit-btn {
   border: none;
-  border-right: 2px solid #D81159;
-  font-size: clamp(14px, 3vw, 20px);
+  border: 2px solid #D81159;
+  font-size: clamp(11px, 3vw, 20px);
   background-color: transparent;
   color: #D81159;
   margin: 0;
@@ -245,4 +252,80 @@ div.selected {
 .reference {
   font-weight: 200;
   text-shadow: 2px 2px 10px black;
+}
+
+.fa-github{
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+}
+
+.fa-github:hover{
+  color: black;
+}
+
+
+@media (max-width: 768px){
+  .operator-container{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+
+  .operator-item{
+    width: 50%;
+    margin-top: 40px;
+    font-size: 48px;
+  }
+
+  .operator-item span{
+    margin-top: 1.6px;
+  }
+
+  #second-operand-div{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 520px){
+
+  #root{
+    padding: 0 10px;
+  }
+
+  .operator-container{
+    width: 100%;
+  }
+  
+  .resultant-div{
+    width: 100%;
+  }
+
+  .input-lbl{
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  .decimal_section{
+    width: 100px;
+  }
+}
+
+@media (max-width: 340px){
+  .input-divs{
+    flex-wrap: wrap;
+  }
+
+  .input-lbl{
+    text-align: center;
+  }
+
+  .datatype-section{
+    margin-top: 50px;
+  }
+
+  .prec_section, .scale_section{
+    justify-content: flex-end;
+  }
 }

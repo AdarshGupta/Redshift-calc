@@ -262,8 +262,10 @@ class CalculatorForm extends React.Component {
 
             <div className="resultant-div">
               <input type="submit" value="Submit" className="submit-btn" />
-              <div className={"resultant-datatype" + (this.state.resultant_datatype.length > 0 ? " res_avail" : "")}>
-                {this.state.resultant_datatype.length > 0 ? this.state.resultant_datatype.toUpperCase() : "Resultant Data Type" }
+              <div className={"resultant-datatype"}>
+                <span className={this.state.resultant_datatype.length > 0 ? "res_avail" : ""}>
+                  {this.state.resultant_datatype.length > 0 ? this.state.resultant_datatype.toUpperCase() : "Resultant Data Type" }
+                </span>
               </div>
             </div>
 
@@ -271,6 +273,7 @@ class CalculatorForm extends React.Component {
               <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html" className="reference" target="blank">Redshift documentation on "Numeric Computation"</a>
               <br/>
               Designed &amp; Built by <a href="https://adarshgupta.github.io/" target="blank">Adarsh Gupta</a>
+              &nbsp;<a href="https://github.com/AdarshGupta/Redshift-calc" target="blank"><i class="fa-brands fa-github"></i></a>
             </div>
           </form>
         </div>
