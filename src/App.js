@@ -117,20 +117,28 @@ function DatatypeInput(props) {
   return (
     <div id={props.operand + "-operand-div"} className="input-divs">
       <label for={props.operand} className="input-lbl" id={props.operand + "-lbl"} > {props.operand} Operand:</label>
-      <select className="datatype-inputs" name={props.operand + "_operand"} id={props.operand} value={props.operandValue} onChange={props.handleChange}>
-        <option value="decimal">Decimal</option>
-        <option value="smallint">SmallInt/Int2</option>
-        <option value="int">Int/Int4</option>
-        <option value="bigint">BigInt/Int8</option>
-        <option value="float">Float/Float4</option>
-        <option value="double">Double/Float8</option>
-      </select>
+      <div className="datatype-section">
+        <select className="datatype-inputs" name={props.operand + "_operand"} id={props.operand} value={props.operandValue} onChange={props.handleChange}>
+          <option value="decimal">Decimal</option>  
+          <option value="smallint">SmallInt/Int2</option>
+          <option value="int">Int/Int4</option>
+          <option value="bigint">BigInt/Int8</option>
+          <option value="float">Float/Float4</option>
+          <option value="double">Double/Float8</option>
+        </select>
 
-      <label for="precision_input" className={"prec_arg_lbl" + (props.operandValue === "decimal" ? "" : " element_hidden")}> Precision</label>
-      <input type="text" name={props.operand + "_precision_input"} id="precision_input" className={props.operandValue === "decimal" ? "" : "element_hidden"} value={props.precision_input} onChange={props.handleChange} />
+        <div className="decimal_section">
+          <div className="prec_section">
+            <label for="precision_input" className={"prec_arg_lbl" + (props.operandValue === "decimal" ? "" : " element_hidden")}> Precision</label>
+            <input type="text" name={props.operand + "_precision_input"} className={"precision_input" + (props.operandValue === "decimal" ? "" : " element_hidden")} value={props.precision_input} onChange={props.handleChange} />
+          </div>
 
-      <label for="scale_input" className={"scale_arg_lbl" + (props.operandValue === "decimal" ? "" : " element_hidden")}> Scale</label>
-      <input type="text" name={props.operand + "_scale_input"} className={"scale_input" + (props.operandValue === "decimal" ? "" : " element_hidden")} value={props.scale_input} onChange={props.handleChange} />
+          <div className="scale_section">
+            <label for="scale_input" className={"scale_arg_lbl" + (props.operandValue === "decimal" ? "" : " element_hidden")}> Scale</label>
+            <input type="text" name={props.operand + "_scale_input"} className={"scale_input" + (props.operandValue === "decimal" ? "" : " element_hidden")} value={props.scale_input} onChange={props.handleChange} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -147,7 +155,7 @@ class CalculatorForm extends React.Component {
       second_precision_input: "",
       second_scale_input: "",
       operator: "",
-      resultant_datatype: "Resultant Data type"
+      resultant_datatype: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -228,23 +236,41 @@ class CalculatorForm extends React.Component {
             <DatatypeInput operand="first" operandValue={this.state.first_operand} precision_input={this.state.first_precision_input} scale_input={this.state.first_scale_input} handleChange={this.handleChange} />
 
             <ul className="operator-container">
-              <li name="operator" className={"operator-item" + (this.state.operator === "add" ? " selected" : "")} onClick={e => this.handleChange(e, "add")}>+</li>
-              <li name="operator" className={"operator-item" + (this.state.operator === "sub" ? " selected" : "")} onClick={e => this.handleChange(e, "sub")}>-</li>
-              <li name="operator" className={"operator-item" + (this.state.operator === "divi" ? " selected" : "")} onClick={e => this.handleChange(e, "divi")}>/</li>
-              <li name="operator" className={"operator-item" + (this.state.operator === "mul" ? " selected" : "")} onClick={e => this.handleChange(e, "mul")}>X</li>
+              <li className="operator-item">
+                <div name="operator" className={this.state.operator === "add" ? "selected" : ""} onClick={e => this.handleChange(e, "add")}>
+                  <span className={this.state.operator === "add" ? "selected" : ""}>+</span>
+                </div>
+              </li>
+              <li className="operator-item">
+                <div name="operator" className={this.state.operator === "sub" ? " selected" : ""} onClick={e => this.handleChange(e, "sub")}>
+                  <span className={this.state.operator === "sub" ? " selected" : ""}>-</span>
+                </div>
+              </li>
+              <li className="operator-item">
+                <div name="operator" className={this.state.operator === "divi" ? " selected" : ""} onClick={e => this.handleChange(e, "divi")}>
+                  <span className={this.state.operator === "divi" ? " selected" : ""}>/</span>
+                </div>
+              </li>
+              <li className="operator-item">
+                <div name="operator" className={this.state.operator === "mul" ? " selected" : ""} onClick={e => this.handleChange(e, "mul")}>
+                  <span className={this.state.operator === "mul" ? " selected" : ""}>X</span>
+                </div>
+              </li>
             </ul>
 
             <DatatypeInput operand="second" operandValue={this.state.second_operand} precision_input={this.state.second_precision_input} scale_input={this.state.second_scale_input} handleChange={this.handleChange} />
 
             <div className="resultant-div">
               <input type="submit" value="Submit" className="submit-btn" />
-              <div className="resultant-datatype">{this.state.resultant_datatype.toUpperCase()}</div>
+              <div className={"resultant-datatype" + (this.state.resultant_datatype.length > 0 ? " res_avail" : "")}>
+                {this.state.resultant_datatype.length > 0 ? this.state.resultant_datatype.toUpperCase() : "Resultant Data Type" }
+              </div>
             </div>
 
             <div className="footer">
-              <a href="https://github.com/AdarshGupta/Redshift-calc" target="blank">Made in React</a> by Adarsh Gupta
-              <br/>
               <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html" className="reference" target="blank">Redshift documentation on "Numeric Computation"</a>
+              <br/>
+              Designed &amp; Built by <a href="https://adarshgupta.github.io/" target="blank">Adarsh Gupta</a>
             </div>
           </form>
         </div>
