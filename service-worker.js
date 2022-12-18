@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Redshift-calc/precache-manifest.599aa0f6df9a6e1caf039e06b981f0ae.js"
+  "/Redshift-calc/precache-manifest.d8569f5148d2d5306163e93f429e84e1.js"
 );
 
 self.addEventListener('message', (event) => {
