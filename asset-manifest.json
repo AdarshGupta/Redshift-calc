@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Redshift-calc/static/css/main.e634d082.chunk.css",
+    "main.js": "/Redshift-calc/static/js/main.e92f0078.chunk.js",
+    "main.js.map": "/Redshift-calc/static/js/main.e92f0078.chunk.js.map",
+    "runtime-main.js": "/Redshift-calc/static/js/runtime-main.bfc478c3.js",
+    "runtime-main.js.map": "/Redshift-calc/static/js/runtime-main.bfc478c3.js.map",
+    "static/js/2.654bc264.chunk.js": "/Redshift-calc/static/js/2.654bc264.chunk.js",
+    "static/js/2.654bc264.chunk.js.map": "/Redshift-calc/static/js/2.654bc264.chunk.js.map",
+    "index.html": "/Redshift-calc/index.html",
+    "precache-manifest.599aa0f6df9a6e1caf039e06b981f0ae.js": "/Redshift-calc/precache-manifest.599aa0f6df9a6e1caf039e06b981f0ae.js",
+    "service-worker.js": "/Redshift-calc/service-worker.js",
+    "static/css/main.e634d082.chunk.css.map": "/Redshift-calc/static/css/main.e634d082.chunk.css.map",
+    "static/media/logo.svg": "/Redshift-calc/static/media/logo.25bf045c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bfc478c3.js",
+    "static/js/2.654bc264.chunk.js",
+    "static/css/main.e634d082.chunk.css",
+    "static/js/main.e92f0078.chunk.js"
+  ]
+}
