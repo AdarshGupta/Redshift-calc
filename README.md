@@ -1,4 +1,48 @@
+# Redshift Calculator
+
+It's a ReactJS based application to help determine the resultant data type (especially precision and scale for numeric/decimal data types) based on the input data types for Amazon Redshift (cloud data warehouse) database service.
+
+## Problem
+It's difficult to predict the resultant precision and scale of a division operation on numeric/decimal datatype columns. 
+
+I have personally found that it is important to know the precision and scale of the result of an operation, since it may lead to data inaccuracies downstream. I have witnessed rounding / calculating variance issues, when using MicroStrategy (a Business Intelligence tool) based on Amazon Redshift as the source.
+
+## Solution
+
+[Amazon Redshift documentation](https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html) shares the formulas to calculate the resultant data types of various numeric computations but it's hassle to manually apply those formulas in some cases (like division operation on numeric/decimal data types).
+
+[Redshift Calculator](https://adarshgupta.github.io/Redshift-calc/) should help you get the resultant data types easily when you input the correct data types and order of your operands.
+
+Site [**Current** - Mobile Responsive]: https://adarshgupta.github.io/Redshift-calc/
+
+![Redshift calculator screenshot](RedshiftCalc-sideproj.png)
+
+Old version [**Outdated** - not mobile responsive]: https://redshift-calculator.netlify.app/
+
+# Development Setup
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Initial Setup
+1. Clone the repository
+```sh
+git clone https://github.com/AdarshGupta/Redshift-calc.git
+```
+
+2. Change your cmd directory to the cloned project.
+```sh
+cd Redshift-calc
+```
+
+3. Install all the node dependencies of the project using npm
+```sh
+npm install
+```
+
+4. Run the applicatioon in your localhost:3000
+```sh
+npm run start
+```
 
 ## Available Scripts
 
@@ -27,15 +71,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run deploy`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You can run this command from your branch and it'll run the "predeploy" and "deploy" scripts/commands in the `package.json`, to build the application and deploy it to the `gh-pages` branch of my GitHub repository.
 
 ## Learn More
 
@@ -43,26 +81,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Deployment to gh-pages: [Create React App documentation](https://create-react-app.dev/docs/deployment/#github-pages)
