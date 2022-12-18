@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a5874c20689534c6682cfc957fbfb90",
+    "revision": "c983f8c597ba7e59df04a6262a745fc8",
     "url": "/Redshift-calc/index.html"
   },
   {
-    "revision": "889da867f489ae40b5a0",
-    "url": "/Redshift-calc/static/css/main.b0433660.chunk.css"
+    "revision": "bb232b468cfed80e49b5",
+    "url": "/Redshift-calc/static/css/main.3ce227e9.chunk.css"
   },
   {
     "revision": "af4cea8e3a0e3a7f5de6",
     "url": "/Redshift-calc/static/js/2.654bc264.chunk.js"
   },
   {
-    "revision": "889da867f489ae40b5a0",
+    "revision": "bb232b468cfed80e49b5",
     "url": "/Redshift-calc/static/js/main.f1d58074.chunk.js"
   },
   {
