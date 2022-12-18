@@ -265,7 +265,7 @@ div.selected {
 }
 
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
   .operator-container{
     width: 500px;
     margin-left: auto;
@@ -280,7 +280,7 @@ div.selected {
   }
 
   .operator-item span{
-    margin-top: 1.6px;
+    margin-top: 9.3px;
   }
 
   #second-operand-div{
@@ -288,14 +288,28 @@ div.selected {
   }
 }
 
-@media (max-width: 520px){
+@media screen and (max-width: 520px){
 
   #root{
     padding: 0 10px;
   }
 
+  .App-header{
+    margin-bottom: 60px;
+  }
+
   .operator-container{
+    padding: 20px 0;
     width: 100%;
+  }
+
+  .operator-item{
+    font-size: 40px;
+  }
+
+  .operator-item div{
+    width: 70px;
+    height: 70px;
   }
   
   .resultant-div{
@@ -309,10 +323,11 @@ div.selected {
 
   .decimal_section{
     width: 100px;
+    margin-top: -30px;
   }
 }
 
-@media (max-width: 340px){
+@media screen and (max-width: 340px){
   .input-divs{
     flex-wrap: wrap;
   }

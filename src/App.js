@@ -273,7 +273,7 @@ class CalculatorForm extends React.Component {
               <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html" className="reference" target="blank">Redshift documentation on "Numeric Computation"</a>
               <br/>
               Designed &amp; Built by <a href="https://adarshgupta.github.io/" target="blank">Adarsh Gupta</a>
-              &nbsp;<a href="https://github.com/AdarshGupta/Redshift-calc" target="blank"><i class="fa-brands fa-github"></i></a>
+              &nbsp;<a href="https://github.com/AdarshGupta/Redshift-calc" target="blank"><i className="fa-brands fa-github"></i></a>
             </div>
           </form>
         </div>
