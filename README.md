@@ -3,13 +3,13 @@
 It's a ReactJS based application to help determine the resultant data type (especially precision and scale for numeric/decimal data types) based on the input data types for Amazon Redshift (cloud data warehouse) database service.
 
 ## Problem
-It's difficult to predict the resultant precision and scale of a division operation on numeric/decimal datatype columns. 
+It's difficult to predict the resultant precision and scale of a division operation on numeric/decimal datatype columns in Amazon Redshift. 
 
-I have personally found that it is important to know the precision and scale of the result of an operation, since it may lead to data inaccuracies downstream. I have witnessed rounding / calculating variance issues, when using MicroStrategy (a Business Intelligence tool) based on Amazon Redshift as the source.
+I have personally found that it is important to know the precision and scale of the result of an operation, since it may lead to data inaccuracies downstream. I have witnessed rounding/calculating variance issues, when using MicroStrategy (a Business Intelligence tool) based on Amazon Redshift as the source.
 
 ## Solution
 
-[Amazon Redshift documentation](https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html) shares the formulas to calculate the resultant data types of various numeric computations but it's hassle to manually apply those formulas in some cases (like division operation on numeric/decimal data types).
+[Amazon Redshift documentation](https://docs.aws.amazon.com/redshift/latest/dg/r_numeric_computations201.html) shares the formulas to calculate the resultant data types of various numeric computations but it's a hassle to manually apply those formulas in some cases (like division operation on numeric/decimal data types).
 
 [Redshift Calculator](https://adarshgupta.github.io/Redshift-calc/) should help you get the resultant data types easily when you input the correct data types and order of your operands.
 
